@@ -5,7 +5,150 @@ $white:  #ffffff;
 $black:  #272727;
 
 // Fonts
-@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat:400,700');
 $primary:   'Montserrat', sans-serif;
 $secondary: 'Lato', sans-serif;
 
+// Reset & Common elements
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(../img/bg-2.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    font-family: $secondary;
+    color: $black;
+}
+
+section {
+    background-color: $white;
+}
+
+// Nav
+nav {
+    background-color: $white;
+    position: fixed;
+    height: 100px;
+    width: 100%;
+
+    #logo {
+        float: left;
+        padding: 30px 16px;
+
+        img {
+            max-height: 40px;
+        }
+    }
+    #toggle {
+        float: right;
+        display: block;
+        width: 28px;
+        height: 30px;
+        padding: 44px 16px;
+    }
+    
+    #toggle span:after,
+    #toggle span:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -9px;
+    }
+    
+    #toggle span:after {
+        top: 9px;
+    }
+    
+    #toggle span {
+        position: relative;
+        display: block;
+    }
+    
+    #toggle span,
+    #toggle span:after,
+    #toggle span:before {
+        width: 100%;
+        height: 5px;
+        background-color: $blue;
+        transition: all 0.3s;
+        backface-visibility: hidden;
+        border-radius: 2px;
+    }
+    
+    /* on activation */
+    #toggle.on span {
+        background-color: transparent;
+    }
+    
+    #toggle.on span:before {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+    
+    #toggle.on span:after {
+        transform: rotate(-45deg) translate(7px, -8px);
+    }
+    
+    #toggle.on+#menu {
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    /* menu appearance*/
+    #menu {
+        position: relative;
+        color: $black;
+        width: 200px;
+        padding: 10px;
+        margin: auto;
+        text-align: center;
+        border-radius: 4px;
+        background: $white;
+        /* just for this demo */
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .4s;
+    }
+    
+    ul,
+    li,
+    li a {
+        list-style: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    
+    li a {
+        padding: 5px;
+        color: $black;
+        text-decoration: none;
+        transition: all .2s;
+    }
+    
+    li a:hover,
+    li a:focus {
+        background: $orange;
+        color: $white;
+    }
+}
+
+// Header
+header {
+    height: calc( 100vh - 100px );
+    padding-top: 100px;
+
+    h1 {
+        font-family: $primary;
+        text-transform: uppercase;
+        font-size: 30px;
+        color: $white;
+        margin: 30px 0;
+        text-align: center;
+        font-weight: bold;
+    }
+}
