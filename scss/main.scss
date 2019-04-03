@@ -13,6 +13,7 @@ $secondary: 'Lato', sans-serif;
 * {
     margin: 0;
     padding: 0;
+    text-align: center;
 }
 
 body {
@@ -151,4 +152,19 @@ header {
         text-align: center;
         font-weight: bold;
     }
+}
+
+// Sections
+section {
+    &#contact {
+        background-color: transparent;
+        color: $white;
+    }
+}
+
+// Footer
+footer {
+    padding: 60px 0;
+    background-color: $black;
+    color: $white;
 }
