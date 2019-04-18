@@ -8,25 +8,40 @@
       HAL Refrigeración - Instalación, reparación y mantenimiento de equipos de
       refrigeración.
     </title>
-    <link rel="stylesheet" href="css/main.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
   </head>
   <body>
     <nav>
       <a href="#" id="logo"><img src="img/logo.png" alt=""/></a>
-      <a href="#menu" id="toggle"><span></span></a>
-      <div id="menu">
-        <ul class="navbar">
-          <li class="navbar-link"><a href="#">Inicio</a></li>
-          <li class="navbar-link"><a href="#company">Empresa</a></li>
-          <li class="navbar-link"><a href="#staff">Técnicos</a></li>
-          <li class="navbar-link"><a href="#contact">Contacto</a></li>
-        </ul>
+      <div class="menu-wrap">
+        <input type="checkbox" class="toggle" />
+        <div class="toggle-icon"><div></div></div>
+        <div class="menu">
+          <div>
+            <div>
+              <ul class="navbar">
+                <li class="navbar-link"><a href="#">Inicio</a></li>
+                <li class="navbar-link"><a href="#company">Empresa</a></li>
+                <li class="navbar-link"><a href="#staff">Técnicos</a></li>
+                <li class="navbar-link"><a href="#contact">Contacto</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
 
-    <header>
-      <h1>Solicite su presupuesto sin cargo!</h1>
-      <button>Presupuesto</button>
+    <header class="hero">
+      <div class="hero-content">
+        <h1>Solicite su presupuesto sin cargo!</h1>
+        <button>Presupuesto</button>
+      </div>
     </header>
 
     <main>
@@ -94,9 +109,9 @@
     </main>
 
     <footer>
-      <a href="https://juandematei.com">Hecho con 👨‍💻 por Juan Dematei</a>
+      <a href="https://juandematei.com"
+        >Hecho con <i class="fas fa-code"></i> por Juan Dematei</a
+      >
     </footer>
-
-    <script src="js/toggle.js"></script>
   </body>
 </html>
