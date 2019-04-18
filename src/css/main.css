@@ -6,8 +6,30 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: "Lato", sans-serif;
+  color: #272727;
+  text-align: center;
+}
+
 ul {
   list-style: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  background: #db5a4a;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .container {
@@ -17,27 +39,35 @@ ul {
   padding: 0 3rem;
 }
 
-body {
-  font-family: "Lato", sans-serif;
-  color: #272727;
-  text-align: center;
-}
-
 nav {
+  background-color: #ffffff;
   width: 100%;
+  height: 100px;
+  padding: 0.5rem 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  position: fixed;
+  z-index: 1;
 }
 
-.menu-wrap {
+nav .menu-wrap {
   position: fixed;
   top: 0;
   right: 0;
   z-index: 1;
 }
 
-.menu-wrap .toggle {
+nav .menu-wrap .toggle {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 25px;
+  right: 25px;
   z-index: 2;
   cursor: pointer;
   width: 50px;
@@ -45,15 +75,14 @@ nav {
   opacity: 0;
 }
 
-.menu-wrap .toggle-icon {
+nav .menu-wrap .toggle-icon {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 20px;
+  right: 20px;
   z-index: 1;
   width: 60px;
   height: 60px;
   padding: 1rem;
-  background: #3b5998;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -65,11 +94,11 @@ nav {
           justify-content: center;
 }
 
-.menu-wrap .toggle-icon > div {
+nav .menu-wrap .toggle-icon > div {
   position: relative;
   width: 100%;
   height: 2px;
-  background-color: #ffffff;
+  background-color: #3b5998;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -81,7 +110,7 @@ nav {
           justify-content: center;
 }
 
-.menu-wrap .toggle-icon > div::before, .menu-wrap .toggle-icon > div::after {
+nav .menu-wrap .toggle-icon > div::before, nav .menu-wrap .toggle-icon > div::after {
   content: "";
   position: absolute;
   z-index: 1;
@@ -91,8 +120,88 @@ nav {
   background: inherit;
 }
 
-.menu-wrap .toggle-icon > div::after {
+nav .menu-wrap .toggle-icon > div::after {
   top: 10px;
+}
+
+nav .menu-wrap .toggle:checked ~ .menu {
+  visibility: visible;
+}
+
+nav .menu-wrap .toggle:checked ~ .menu > div {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition-duration: 0.75s;
+          transition-duration: 0.75s;
+}
+
+nav .menu-wrap .toggle:checked ~ .menu > div > div {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease 0.4s;
+}
+
+nav .menu-wrap .menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  visibility: hidden;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+nav .menu-wrap .menu .menu-overlay {
+  background: rgba(59, 89, 152, 0.9);
+  border-radius: 50%;
+  width: 200vw;
+  height: 200vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 0;
+      -ms-flex: none;
+          flex: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+nav .menu-wrap .menu .menu-overlay .menu-content {
+  text-align: center;
+  max-width: 90vw;
+  max-height: 100vh;
+  opacity: 0;
+  -webkit-transition: opacity 0.4s ease;
+  transition: opacity 0.4s ease;
+}
+
+nav .menu-wrap .menu .menu-overlay .menu-content .navbar .navbar-link {
+  color: #ffffff;
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+nav .menu-wrap .menu .menu-overlay .menu-content .navbar .navbar-link:hover {
+  font-size: 1.6rem;
 }
 
 header.hero {
@@ -117,23 +226,42 @@ header.hero::before {
   z-index: -1;
 }
 
+header.hero .hero-content {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 header.hero .hero-content h1 {
   font-family: "Montserrat", sans-serif;
   text-transform: uppercase;
-  font-size: 30px;
+  font-size: 2rem;
   color: #ffffff;
-  margin: 30px 0;
+  margin: 2rem 0;
   text-align: center;
   font-weight: bold;
 }
 
 section {
-  background-color: #ffffff;
+  background-color: #272727;
+  color: #ffffff;
+  padding: 3rem 0;
 }
 
 footer {
-  padding: 60px 0;
-  background-color: #272727;
+  padding: 3rem 0;
+  background-color: #3b5998;
   color: #ffffff;
 }
 /*# sourceMappingURL=main.css.map */
