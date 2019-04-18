@@ -105,6 +105,7 @@ nav {
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: all 0.4s ease;
 
         &::before,
         &::after {
@@ -131,6 +132,16 @@ nav {
     .toggle:checked ~ .menu > div > div {
       opacity: 1;
       transition: opacity 0.4s ease 0.4s;
+    }
+    .toggle:checked + .toggle-icon > div {
+      transform: rotate(135deg);
+      background-color: $white;
+    }
+    .toggle:checked + .toggle-icon > div:before,
+    .toggle:checked + .toggle-icon > div:after {
+      top: 0;
+      transform: rotate(90deg);
+      background-color: $white;
     }
 
     .menu {
