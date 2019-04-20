@@ -135,11 +135,11 @@
         <div class="container">
           <h2>Contacto</h2>
           <p class="lead">Escríbanos y solicite su presupuesto.</p>
-          <form action="" method="post">
-            <input type="text" placeholder="Nombre" />
-            <input type="email" name="email" id="" placeholder="Email" />
-            <input type="text" placeholder="Asunto" />
-            <textarea name="" id="" cols="30" rows="10"></textarea>
+          <form id="contact-form" action="php/contact.php" method="post">
+            <input type="text" name="name" placeholder="Nombre" />
+            <input type="email" name="email" placeholder="Email" />
+            <input type="text" name="reason" placeholder="Asunto" />
+            <textarea name="message" cols="30" rows="10"></textarea>
             <button type="submit">Enviar</button>
           </form>
         </div>
@@ -151,5 +151,8 @@
         >Hecho con<i class="fas fa-code"></i>por Juan Dematei</a
       >
     </footer>
+
+    <script src="js/validator.js"></script>
+    <script src="js/contact.js"></script>
   </body>
 </html>
