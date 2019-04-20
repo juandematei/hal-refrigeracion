@@ -19,7 +19,7 @@
   <body>
     <nav>
       <div class="logo">
-        <a href="#"><img src="img/logo.png" alt=""/></a>
+        <img src="img/logo.svg" alt="" />
       </div>
       <div class="menu-wrap">
         <input type="checkbox" class="toggle" />
@@ -75,34 +75,59 @@
             Nuestros técnicos están capacitados y matriculados en la Cámara
             Argentina de Calefacción, Aire Acondicionado y Ventilación (CACAAV).
           </p>
+
           <div class="staff-card">
             <h3>Juan Manuel López</h3>
             <img src="http://lorempixel.com/200/200/people/1" />
             <p>Última actualización refrigerante R410a.</p>
-            <a
-              href="https://www.cacaav.com.ar/matriculados/listado?apellido=l%C3%B3pez&nombre=juan+manuel&empresa=&provincia=&localidad="
-              >Ver matrícula</a
-            >
-            <a href="tel:+541158759785"></a>
+            <div class="staff-links">
+              <a
+                href="https://www.cacaav.com.ar/matriculados/listado?apellido=l%C3%B3pez&nombre=juan+manuel&empresa=&provincia=&localidad="
+                target="_blank"
+                ><i class="fas fa-id-card"></i>Ver matrícula</a
+              >
+              <a
+                href="https://api.whatsapp.com/send?phone=541158759785"
+                target="_blank"
+                ><i class="fab fa-whatsapp"></i>WhatsApp</a
+              >
+            </div>
           </div>
+
           <div class="staff-card">
             <h3>Hernán Serrano</h3>
             <img src="http://lorempixel.com/200/200/people/2" />
             <p>Última actualización refrigerante R410a.</p>
-            <a
-              href="https://www.cacaav.com.ar/matriculados/listado?apellido=serrano&nombre=hernan&empresa=&provincia=&localidad="
-              >Ver matrícula</a
-            >
-            <a href="tel:+541155889216"></a>
+            <div class="staff-links">
+              <a
+                href="https://www.cacaav.com.ar/matriculados/listado?apellido=serrano&nombre=hernan&empresa=&provincia=&localidad="
+                target="_blank"
+                ><i class="fas fa-id-card"></i>Ver matrícula</a
+              >
+              <a
+                href="https://api.whatsapp.com/send?phone=541155889216"
+                target="_blank"
+                ><i class="fab fa-whatsapp"></i>WhatsApp</a
+              >
+            </div>
           </div>
         </div>
       </section>
 
       <section id="social-media">
         <div class="container">
-          <button class="fb"><i class="fab fa-facebook"></i> Facebook</button>
-          <button class="ig"><i class="fab fa-instagram"></i> Instagram</button>
-          <button class="wa"><i class="fab fa-whatsapp"></i> WhatsApp</button>
+          <button
+            class="fb"
+            onclick="window.location.href = 'https://www.facebook.com/halrefrigeracion';"
+          >
+            <i class="fab fa-facebook"></i>Facebook
+          </button>
+          <button
+            class="ig"
+            onclick="window.location.href = 'https://www.instagram.com/halrefri';"
+          >
+            <i class="fab fa-instagram"></i>Instagram
+          </button>
         </div>
       </section>
 
@@ -122,8 +147,8 @@
     </main>
 
     <footer>
-      <a href="https://juandematei.com"
-        >Hecho con <i class="fas fa-code"></i> por Juan Dematei</a
+      <a href="https://juandematei.com" target="_blank"
+        >Hecho con<i class="fas fa-code"></i>por Juan Dematei</a
       >
     </footer>
   </body>

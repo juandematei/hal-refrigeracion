@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+i {
+  margin: 0 0.5rem;
+}
+
 button {
   display: inline-block;
   border: none;
@@ -50,7 +54,7 @@ button:hover {
   max-width: 960px;
   margin: auto;
   overflow: hidden;
-  padding: 0 3rem;
+  padding: 0 2rem;
 }
 
 nav {
@@ -69,6 +73,14 @@ nav {
           justify-content: space-between;
   position: fixed;
   z-index: 1;
+}
+
+nav .logo {
+  height: 60px;
+}
+
+nav .logo img {
+  height: 100%;
 }
 
 nav .menu-wrap {
@@ -312,6 +324,55 @@ section#staff {
   color: #272727;
 }
 
+section#staff .staff-card {
+  margin: 2rem 0;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  background-color: #272727;
+  color: #ffffff;
+}
+
+section#staff .staff-card h3 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1.5rem 0.5rem;
+  text-transform: capitalize;
+}
+
+section#staff .staff-card img {
+  border-radius: 50%;
+}
+
+section#staff .staff-card p {
+  padding: 1.5rem 0.5rem;
+  margin: 0;
+}
+
+section#staff .staff-card .staff-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+section#staff .staff-card .staff-links a {
+  display: block;
+  background-color: #db5a4a;
+  width: 50%;
+  padding: 1.5rem 0.5rem;
+  border-radius: 0px 0px 0px 10px;
+  -moz-border-radius: 0px 0px 0px 10px;
+  -webkit-border-radius: 0px 0px 0px 10px;
+}
+
+section#staff .staff-card .staff-links a:last-child {
+  background-color: #128c7e;
+  border-radius: 0px 0px 10px 0px;
+  -moz-border-radius: 0px 0px 10px 0px;
+  -webkit-border-radius: 0px 0px 10px 0px;
+}
+
 section#social-media > div {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -342,10 +403,6 @@ section#social-media button.fb:hover {
 
 section#social-media button.ig:hover {
   background: #c32aa3;
-}
-
-section#social-media button.wa:hover {
-  background: #25d366;
 }
 
 section#contact {
@@ -407,5 +464,9 @@ footer {
   padding: 3rem 0;
   background-color: #272727;
   color: #ffffff;
+}
+
+footer i {
+  color: red;
 }
 /*# sourceMappingURL=main.css.map */
