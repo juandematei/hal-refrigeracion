@@ -22,7 +22,7 @@ a {
 }
 
 i {
-  margin: 0 0.5rem;
+  margin-right: 0.5rem;
 }
 
 button {
@@ -41,13 +41,14 @@ button {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
+  outline: none;
 }
 
 button:hover {
   background: #d74735;
-  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
 }
 
 .container {
@@ -76,7 +77,7 @@ nav {
 }
 
 nav .logo {
-  height: 60px;
+  height: 50px;
 }
 
 nav .logo img {
@@ -205,8 +206,8 @@ nav .menu-wrap .menu {
 nav .menu-wrap .menu .menu-overlay {
   background: rgba(59, 89, 152, 0.9);
   border-radius: 50%;
-  width: 200vw;
-  height: 200vw;
+  width: 220vw;
+  height: 220vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -240,6 +241,8 @@ nav .menu-wrap .menu .menu-overlay .menu-content .navbar .navbar-link {
   padding: 1rem;
   text-transform: uppercase;
   font-weight: bold;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
 nav .menu-wrap .menu .menu-overlay .menu-content .navbar .navbar-link:hover {
@@ -309,14 +312,15 @@ section h2 {
 }
 
 section p {
-  line-height: 1.5rem;
+  line-height: 2rem;
   margin-bottom: 2rem;
 }
 
 section p.lead {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: 300;
   font-style: italic;
+  line-height: 3rem;
 }
 
 section#staff {
@@ -328,7 +332,7 @@ section#staff .staff-card {
   margin: 2rem 0;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
-  border-radius: 10px;
+  border-radius: 0.3rem;
   background-color: #272727;
   color: #ffffff;
 }
@@ -337,7 +341,7 @@ section#staff .staff-card h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 0.5rem 0rem;
   text-transform: capitalize;
 }
 
@@ -346,8 +350,7 @@ section#staff .staff-card img {
 }
 
 section#staff .staff-card p {
-  padding: 1.5rem 0.5rem;
-  margin: 0;
+  padding: 1.5rem 0.5rem 0rem;
 }
 
 section#staff .staff-card .staff-links {
@@ -361,16 +364,26 @@ section#staff .staff-card .staff-links a {
   background-color: #db5a4a;
   width: 50%;
   padding: 1.5rem 0.5rem;
-  border-radius: 0px 0px 0px 10px;
-  -moz-border-radius: 0px 0px 0px 10px;
-  -webkit-border-radius: 0px 0px 0px 10px;
+  border-radius: 0px 0px 0px 0.3rem;
+  -moz-border-radius: 0px 0px 0px 0.3rem;
+  -webkit-border-radius: 0px 0px 0px 0.3rem;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+section#staff .staff-card .staff-links a:hover {
+  background: #d74735;
 }
 
 section#staff .staff-card .staff-links a:last-child {
   background-color: #128c7e;
-  border-radius: 0px 0px 10px 0px;
-  -moz-border-radius: 0px 0px 10px 0px;
-  -webkit-border-radius: 0px 0px 10px 0px;
+  border-radius: 0px 0px 0.3rem 0px;
+  -moz-border-radius: 0px 0px 0.3rem 0px;
+  -webkit-border-radius: 0px 0px 0.3rem 0px;
+}
+
+section#staff .staff-card .staff-links a:last-child:hover {
+  background: #0f756a;
 }
 
 section#social-media > div {
@@ -442,22 +455,38 @@ section#contact form {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
+  margin-bottom: 1rem;
 }
 
 section#contact form input,
 section#contact form textarea {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
   background-color: #ffffff;
   border: none;
-  border-radius: 0.2rem;
+  border-radius: 0.3rem;
   width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+  outline: none;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+}
+
+section#contact form input:focus,
+section#contact form textarea:focus {
+  -webkit-box-shadow: 0px 0px 5px 0px black;
+  box-shadow: 0px 0px 5px 0px black;
 }
 
 section#contact form button {
   width: 100%;
+}
+
+section#contact a {
+  font-weight: bold;
 }
 
 footer {
@@ -468,5 +497,6 @@ footer {
 
 footer i {
   color: red;
+  margin: 0 0.5rem;
 }
 /*# sourceMappingURL=main.css.map */

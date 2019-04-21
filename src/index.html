@@ -45,7 +45,7 @@
     <header class="hero">
       <div class="hero-content container">
         <h1>Solicite su presupuesto sin cargo!</h1>
-        <button>Presupuesto</button>
+        <button onclick="window.location.href = '#contact';">Contacto</button>
       </div>
     </header>
 
@@ -78,7 +78,6 @@
 
           <div class="staff-card">
             <h3>Juan Manuel López</h3>
-            <img src="http://lorempixel.com/200/200/people/1" />
             <p>Última actualización refrigerante R410a.</p>
             <div class="staff-links">
               <a
@@ -96,7 +95,6 @@
 
           <div class="staff-card">
             <h3>Hernán Serrano</h3>
-            <img src="http://lorempixel.com/200/200/people/2" />
             <p>Última actualización refrigerante R410a.</p>
             <div class="staff-links">
               <a
@@ -134,20 +132,20 @@
       <section id="contact">
         <div class="container">
           <h2>Contacto</h2>
-          <p class="lead">Escríbanos y solicite su presupuesto.</p>
           <form action="https://formspree.io/info@halrefrigeracion.com" method="POST" />
-            <input type="text" name="name" placeholder="Nombre" />
-            <input type="email" name="email" placeholder="Email" />
-            <input type="text" name="reason" placeholder="Asunto" />
-            <textarea name="message" cols="30" rows="10"></textarea>
-            <button type="submit">Enviar</button>
-          </form>
+          <input type="text" name="name" placeholder="Nombre" />
+          <input type="email" name="email" placeholder="Email" />
+          <input type="text" name="reason" placeholder="Asunto" />
+          <textarea name="message" cols="30" rows="10" placeholder="Escriba su consulta..."></textarea>
+          <button type="submit">Enviar</button>
+        </form>
+        <p>También puede enviarnos un correo a <a href="mailto:info@halrefrigeracion.com">info@halrefrigeracion.com</a></p>
         </div>
       </section>
     </main>
 
     <footer>
-      <a href="https://juandematei.com" target="_blank"
+      <a href="https://www.juandematei.com" target="_blank"
         >Hecho con<i class="fas fa-code"></i>por Juan Dematei</a
       >
     </footer>
