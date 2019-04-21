@@ -96,7 +96,6 @@ nav {
   }
 
   .menu-wrap {
-    //background-color: lightsalmon;
     position: fixed;
     top: 0;
     right: 0;
@@ -121,10 +120,11 @@ nav {
       width: 60px;
       height: 60px;
       padding: 1rem;
-      //background: aquamarine;
       display: flex;
       align-items: center;
       justify-content: center;
+      //background-color: $blue;
+      border-radius: $radius;
 
       > div {
         position: relative;
@@ -296,56 +296,67 @@ section {
     background-color: $white;
     color: $black;
 
-    .staff-card {
-      margin: 2rem 0;
-      -webkit-box-shadow: $shadow;
-      -moz-box-shadow: $shadow;
-      box-shadow: $shadow;
-      border-radius: $radius;
-      background-color: $black;
-      color: $white;
+    .staff-cards {
+      display: flex;
+      flex-direction: column;
 
-      h3 {
-        font-family: $primary;
-        font-size: 1.5rem;
-        font-weight: 400;
-        padding: 1.5rem 0.5rem 0rem;
-        text-transform: capitalize;
+      @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
       }
 
-      img {
-        border-radius: 50%;
-      }
+      .card {
+        margin: 2rem 0;
+        -webkit-box-shadow: $shadow;
+        -moz-box-shadow: $shadow;
+        box-shadow: $shadow;
+        border-radius: $radius;
+        background-color: $black;
+        color: $white;
 
-      p {
-        padding: 1.5rem 0.5rem 0rem;
-      }
-
-      .staff-links {
-        display: flex;
-
-        a {
-          display: block;
-          background-color: $orange;
-          width: 50%;
-          padding: 1.5rem 0.5rem;
-          border-radius: 0px 0px 0px $radius;
-          -moz-border-radius: 0px 0px 0px $radius;
-          -webkit-border-radius: 0px 0px 0px $radius;
-          transition: all 0.4s ease;
-
-          &:hover {
-            background: darken($orange, 5);
-          }
+        h3 {
+          font-family: $primary;
+          font-size: 1.5rem;
+          font-weight: 400;
+          padding: 1.5rem 0.5rem 0rem;
+          text-transform: capitalize;
         }
-        a:last-child {
-          background-color: #128c7e;
-          border-radius: 0px 0px $radius 0px;
-          -moz-border-radius: 0px 0px $radius 0px;
-          -webkit-border-radius: 0px 0px $radius 0px;
 
-          &:hover {
-            background: darken(#128c7e, 5);
+        img {
+          border-radius: 50%;
+        }
+
+        p {
+          padding: 1.5rem 0.5rem 0rem;
+        }
+
+        .staff-links {
+          display: flex;
+
+          a {
+            display: block;
+            background-color: $orange;
+            width: 50%;
+            padding: 1.5rem 0.5rem;
+            border-radius: 0px 0px 0px $radius;
+            -moz-border-radius: 0px 0px 0px $radius;
+            -webkit-border-radius: 0px 0px 0px $radius;
+            transition: all 0.4s ease;
+
+            &:hover {
+              background: darken($orange, 5);
+            }
+          }
+          a:last-child {
+            background-color: #128c7e;
+            border-radius: 0px 0px $radius 0px;
+            -moz-border-radius: 0px 0px $radius 0px;
+            -webkit-border-radius: 0px 0px $radius 0px;
+
+            &:hover {
+              background: darken(#128c7e, 5);
+            }
           }
         }
       }
@@ -357,6 +368,11 @@ section {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @media only screen and (min-width: 768px) {
+        flex-direction: row;
+        justify-content: space-around;
+      }
     }
     button {
       background: $white;
@@ -404,6 +420,12 @@ section {
       justify-content: center;
       width: 100%;
       margin-bottom: 1rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      @media only screen and (min-width: 768px) {
+        width: 75%;
+      }
 
       input,
       textarea {

@@ -119,6 +119,7 @@ nav .menu-wrap .toggle-icon {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 0.3rem;
 }
 
 nav .menu-wrap .toggle-icon > div {
@@ -328,7 +329,31 @@ section#staff {
   color: #272727;
 }
 
-section#staff .staff-card {
+section#staff .staff-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  section#staff .staff-cards {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+}
+
+section#staff .staff-cards .card {
   margin: 2rem 0;
   -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
@@ -337,7 +362,7 @@ section#staff .staff-card {
   color: #ffffff;
 }
 
-section#staff .staff-card h3 {
+section#staff .staff-cards .card h3 {
   font-family: "Montserrat", sans-serif;
   font-size: 1.5rem;
   font-weight: 400;
@@ -345,21 +370,21 @@ section#staff .staff-card h3 {
   text-transform: capitalize;
 }
 
-section#staff .staff-card img {
+section#staff .staff-cards .card img {
   border-radius: 50%;
 }
 
-section#staff .staff-card p {
+section#staff .staff-cards .card p {
   padding: 1.5rem 0.5rem 0rem;
 }
 
-section#staff .staff-card .staff-links {
+section#staff .staff-cards .card .staff-links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-section#staff .staff-card .staff-links a {
+section#staff .staff-cards .card .staff-links a {
   display: block;
   background-color: #db5a4a;
   width: 50%;
@@ -371,18 +396,18 @@ section#staff .staff-card .staff-links a {
   transition: all 0.4s ease;
 }
 
-section#staff .staff-card .staff-links a:hover {
+section#staff .staff-cards .card .staff-links a:hover {
   background: #d74735;
 }
 
-section#staff .staff-card .staff-links a:last-child {
+section#staff .staff-cards .card .staff-links a:last-child {
   background-color: #128c7e;
   border-radius: 0px 0px 0.3rem 0px;
   -moz-border-radius: 0px 0px 0.3rem 0px;
   -webkit-border-radius: 0px 0px 0.3rem 0px;
 }
 
-section#staff .staff-card .staff-links a:last-child:hover {
+section#staff .staff-cards .card .staff-links a:last-child:hover {
   background: #0f756a;
 }
 
@@ -397,6 +422,17 @@ section#social-media > div {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+@media only screen and (min-width: 768px) {
+  section#social-media > div {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
 }
 
 section#social-media button {
@@ -456,6 +492,14 @@ section#contact form {
           justify-content: center;
   width: 100%;
   margin-bottom: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media only screen and (min-width: 768px) {
+  section#contact form {
+    width: 75%;
+  }
 }
 
 section#contact form input,
