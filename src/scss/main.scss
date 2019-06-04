@@ -465,8 +465,24 @@ footer {
   background-color: $black;
   color: $white;
 
-  i {
-    color: red;
-    margin: 0 0.5rem;
+  .author {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    font-family: $primary;
+    font-size: 0.8rem;
+    line-height: 30px;
+
+    &-logo {
+      background-image: url(https://www.juandematei.com/img/logo-white.png);
+      background-size: 30px;
+      background-position: 0px;
+      background-repeat: no-repeat;
+      height: 30px;
+      display: inline-block;
+      padding-left: 40px;
+      margin-left: 10px;
+    }
   }
 }
